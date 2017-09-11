@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bbcfad36-8a9f-4b6b-8e70-50ea6679214e" name="police" url="http://184.95.41.121">
+        <fileTransfer host="184.95.41.121" port="21" password="dfeedfc8dfc1df8edf98df9bdf9bdf9bdfe7dfd3dfcedf8edf98df9bdf9bdf9b" username="bhargavc">
+          <advancedOptions>
+            <advancedOptions compatibilityMode="true" dataProtectionLevel="Private" forceListCommand="true" passiveMode="true" showHiddenFiles="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

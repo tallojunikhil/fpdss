@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>::. Fair Field Police Department .::</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/myscript.js"></script>
+</head>
+<body>
+<section class="">
+    <article class="top-login">
+        <div class="container">
+            <div class="col-md-8">
+                <a href="index2.html"><h3>Fairfield Police Department</h3></a>
+            </div>
+            <div class="col-md-4 text-right">
+                <a href="index2.html" class="btn btn-default btn-sm">Sign In</a>
+                <a href="signup2.html" class="btn btn-default btn-sm">Sign Up</a>
+            </div>
+        </div>
+    </article>
+    <article class="signup-form">
+        <div class="container">
+            <div class="col-md-offset-4 col-md-4">
+                <div class="front">
+
+                    <form class="form-horizontal front-form" method="post">
+                        <div class="result-display"><?= !empty($message) ? $message : ''; ?></div>
+                        <div class="col-md-12">
+                            <div class="inner-image form-group">
+                                <img src="images/policelogo.png" class="img" alt="Police Logo" align="center"/>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope-o"></i> </span>
+                                    <input type="email" class="form-control" name="email" placeholder="Email ID" required/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-key"></i> </span>
+                                    <input type="password" class="form-control" name="password" value="" placeholder="*********"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="pull-left">
+                                    <a href="#" class="forgot_pass">Forgot Password ? </a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="home2.html" class="btn btn-primary" >Sign In</a>
+                                    <!--<button type="submit" name="signin" class="btn btn-default">Sign in</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="back" style="display: none">
+                    <div class="forgot-page">
+                        <form class="form-horizontal front-form" id="form1" method="post">
+                            <div class="forgot-display"></div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Email ID</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope-o"></i> </span>
+                                        <input type="email" class="form-control name" placeholder="Email ID" name="email" value="" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Security Question</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-question-circle"></i> </span>
+                                        <select class="form-control name" name="question_id" required>
+                                            <option value="">Select a question</option>
+                                            <option value="1">2+2</option>
+                                            <option value="2">4+4</option>
+                                            <option value="3">2+8</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Answer</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-reply"></i> </span>
+                                        <input class="form-control name" name="answer" required>
+                                    </div>
+                                </div>
+                                <button class="btn btn-info " type="submit">SEND</button>
+                                <button type="button" class="btn btn-danger login_cancel ">CANCEL</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+<script>
+    $(document).ready(function () {
+        $('.forgot_pass').click(function () {
+            $('.front').hide('slow');
+            $('.back').show('slow');
+            return false;
+        })
+        $('.login_cancel').click(function () {
+            $('.names').val('');
+            $('.back').hide('slow');
+            $('.front').show('slow');
+            return false;
+        })
+
+    })
+</script>
+</body>
+</html>
